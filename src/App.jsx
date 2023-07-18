@@ -20,7 +20,7 @@ const App = () => {
       <Navbar title="Star Wars Starships" />
       <div className="card-container">
         {starships.map((starship) => (
-          <Card key={starship.name} name={starship.name} />
+          <Card key={starship.name} name={starship.name} model={starship.model} />
         ))}
       </div>
     </div>

@@ -1,18 +1,21 @@
 /* components/Card/Card.css */
+
 .card {
-    background-color: var(--primary-bg-color);
-    color: var(--primary-text-color);
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 16px;
-    flex: 1 0 21%;
-    min-width: 200px;
-    max-width: 300px;
-  }
-  
-  .card-title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+  padding: 16px;
+  background-color: var(--primary-bg-color, #333333);
+  color: var(--primary-text-color, #ffffff);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.starship-model {
+  font-size: 14px;
+  font-weight: normal;
+}
