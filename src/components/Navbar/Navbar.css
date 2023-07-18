@@ -1,19 +1,18 @@
 /* components/Navbar/Navbar.css */
-/* components/Navbar/Navbar.css */
 .navbar {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
+  background-color: var(--navbar-bg-color);
+  color: var(--bright-deco-text);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Open Sans', sans-serif; /* sans-serif font */
-  width: 100%; /* Make the navbar occupy the full width */
-  padding: 10px; /* Add padding as needed */
-  box-sizing: border-box; /* Include padding in the total width */
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 
 .navbar-title {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
 }

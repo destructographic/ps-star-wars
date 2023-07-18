@@ -1,10 +1,11 @@
 /* /src/App.css */
 
 :root {
-  --primary-bg-color: #1a1a1a;
+  --primary-bg-color: #22222f;
   --primary-text-color: #edece3;
-  --card-bg-color: #263333;
-  --card-text-color: #edece3;
+  --bright-deco-text: rgb(0, 146, 219);
+  --navbar-bg-color: #202020;
+  --card-bg-color: rgba(0, 128, 255, 0.1);
   --font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -12,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
+  background-color: var(--primary-bg-color);
 }
 
 .app {
@@ -26,5 +28,9 @@ body {
 .loading-message {
   font-size: 36px;
   text-align: center;
-  margin-top: 200px; /* center the message vertically */
+  color: var(--bright-deco-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
 }
