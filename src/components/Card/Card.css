@@ -1,12 +1,18 @@
 /* components/Card/Card.css */
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
 .card {
-  padding: 16px;
-  background-color: var(--primary-bg-color, #333333);
-  color: var(--primary-text-color, #ffffff);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg-color, #333333);
+  color: var(--card-text-color, #ffffff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   margin: 8px;
+  padding: 20px;
 }
 
 .card-title {

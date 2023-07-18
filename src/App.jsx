@@ -9,7 +9,7 @@ const App = () => {
   const [starships, setStarships] = useState([]);
 
   useEffect(() => {
-    // Fetch all starships and update the state
+    // fetch all starships and update the state
     getAllStarships()
       .then((data) => setStarships(data.results))
       .catch((error) => console.error('Error fetching starships:', error));

@@ -1,10 +1,16 @@
 /* /src/App.css */
 
 :root {
-    --primary-bg-color: #333333;
-    --primary-text-color: #ffffff;
-}
+    --primary-bg-color: #1a1a1a;
+    --primary-text-color: #edece3;
+    --card-bg-color: #263333;
+    --card-text-color: #edece3;
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
 
+  
 body {
     margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
 }
