@@ -1,27 +1,33 @@
 /* components/Card/Card.css */
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .card {
   background-color: var(--card-bg-color, #333333);
   color: var(--card-text-color, #ffffff);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
   border-radius: 10px;
   margin: 8px;
   padding: 20px;
+  width: 300px; /* Add a fixed width to the card */
 }
 
 .card-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 8px;
+  /* Allow the title text to wrap to the next line */
+  word-wrap: break-word;
 }
 
 .starship-model {
   font-size: 14px;
   font-weight: normal;
+  /* Allow the model text to wrap to the next line */
+  word-wrap: break-word;
 }

@@ -1,0 +1,44 @@
+/* components/InfoTable/InfoTable.css */
+.table-container {
+    margin-right: 20px;
+  }
+  
+  .info-table {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-table th,
+  .info-table td {
+    padding: 8px 12px;
+    color: var(--primary-text-color);
+  }
+  
+  .info-table th {
+    font-weight: bold;
+    text-align: right; /* right-align the table header text */
+    padding: 10px;
+  }
+  
+  /* Media query to switch to row layout on larger screens */
+  @media (min-width: 768px) {
+    .info-table {
+      flex-direction: row;
+      align-items: center; /* Reset alignment for row layout */
+    }
+  
+    .info-table th,
+    .info-table td {
+      border: none; /* Remove all borders from the table */
+    }
+  
+    .info-table th {
+      padding-right: 12px;
+      padding-left: 0; /* Remove left padding for row layout */
+    }
+  
+    .info-table td {
+      padding: 8px 12px;
+    }
+  }
+  

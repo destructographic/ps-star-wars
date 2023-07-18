@@ -1,13 +1,22 @@
-// components/Navbar/Navbar.jsx
-
+// components/Navbar/Navbar.js
 import React from 'react';
 import './Navbar.css';
+import InfoTable from '../InfoTable/InfoTable';
 
-const Navbar = () => {
+const Navbar = ({ title, starshipsCount }) => {
+  // date in the format "yyyy-mm-dd"
+  const today = new Date().toISOString().slice(0, 10);
+
   return (
-    <nav className="navbar">
-      <h1 className="navbar__title">Star Wars Starships</h1>
-    </nav>
+    <header className="navbar">
+      <div className="navbar-title">{title}</div>
+      <InfoTable 
+        data={[
+          { header: 'today', value: today },
+          { header: 'starships', value: starshipsCount },
+        ]}
+      />
+    </header>
   );
 };
 
