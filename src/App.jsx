@@ -1,15 +1,28 @@
 // App.jsx
-
-import React from 'react';
-import Navbar from './components/Navbar/Navbar';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import Card from './components/Card/Card';
+import { getAllStarships } from './services/sw-api';
 
 const App = () => {
+  const [starships, setStarships] = useState([]);
+
+  useEffect(() => {
+    // Fetch all starships and update the state
+    getAllStarships()
+      .then((data) => setStarships(data.results))
+      .catch((error) => console.error('Error fetching starships:', error));
+  }, []);
+
   return (
     <div className="app">
-      <Navbar />
-      <h1>Hello Star Wars API!</h1>
-      {/* Add other components and content here */}
+      <Navbar title="Star Wars Starships" />
+      <div className="card-container">
+        {starships.map((starship) => (
+          <Card key={starship.name} name={starship.name} />
+        ))}
+      </div>
     </div>
   );
 };
