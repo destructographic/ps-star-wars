@@ -6,17 +6,15 @@ import Card from './components/Card/Card';
 import { getAllStarships } from './services/sw-api';
 
 const App = () => {
-  const [starships, setStarships] = useState([]);
+  const [starshipsData, setStarshipsData] = useState(null); // Store the data object containing count and starships
   const [isLoading, setIsLoading] = useState(true);
   const [selectedStarship, setSelectedStarship] = useState(null);
-  const [starshipsCount, setStarshipsCount] = useState(0); // Add a new state for starshipsCount
 
   useEffect(() => {
     getAllStarships()
       .then((data) => {
         console.log('Fetched starships data:', data);
-        setStarships(data);
-        setStarshipsCount(data.count); // Set the starshipsCount from the API data
+        setStarshipsData(data); // Set the starshipsData object
         setIsLoading(false);
       })
       .catch((error) => {
@@ -31,12 +29,12 @@ const App = () => {
 
   return (
     <div className="app">
-      <Navbar title="Star Wars Starships" starshipsCount={starshipsCount} />
+      <Navbar title="Star Wars Starships" starshipsCount={starshipsData ? starshipsData.count : 0} />
       <div className="card-container">
         {isLoading ? (
           <p>Loading...</p>
         ) : (
-          starships.map((starship) => (
+          starshipsData && starshipsData.starships.map((starship) => (
             <Card key={starship.name} name={starship.name} model={starship.model} onClick={() => handleCardClick(starship)} />
           ))
         )}

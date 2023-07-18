@@ -16,7 +16,10 @@ export async function getAllStarships() {
       };
     }));
 
-    return starships;
+    return {
+      count: data.count,
+      starships: starships,
+    };
   } catch (error) {
     throw new Error('Failed to fetch starships data');
   }
